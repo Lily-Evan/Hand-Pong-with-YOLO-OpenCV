@@ -1,37 +1,42 @@
-🏓 Hand Pong with YOLO & OpenCV
-📖 Description
+# 🏓 Hand Pong with YOLOv8 & OpenCV  
 
-Hand Pong is an interactive game where you use your hand instead of a keyboard or mouse!
-With the help of YOLOv8 (object detection) and OpenCV, your webcam tracks the position of your hand and moves the paddle on the screen.
-Your goal: Don’t let the ball escape!
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)  
+![YOLOv8](https://img.shields.io/badge/YOLOv8-Object%20Detection-green?logo=github)  
+![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-red?logo=opencv)  
 
-✨ Features
+---
 
-Real-time hand detection using YOLO.
+## 📖 Overview  
+**Hand Pong** is an interactive computer vision game where you control a Pong paddle using **your hand** instead of a keyboard or mouse.  
+With **YOLOv8** for object detection and **OpenCV** for video processing, your webcam tracks your hand in real time to move the paddle and keep the ball in play.  
 
-Paddle moves vertically based on your hand position.
+---
 
-Classic Pong gameplay with score and Game Over.
+## ✨ Features  
+- 🎥 **Real-time hand tracking** with YOLOv8  
+- 🕹️ **Classic Pong mechanics** (ball bouncing, scoring, game over)  
+- 🤚 **Hand-controlled paddle** instead of keyboard input  
+- 👥 **Expandable to multiplayer** with two paddles  
+- 🔧 Easy to modify and extend  
 
-Extendable to 2-player mode (second paddle with another hand/player).
+---
 
-🛠️ Requirements
+## 🛠️ Requirements  
 
-Python 3.8+
+- Python **3.8+**  
+- [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics)  
+- OpenCV (`pip install opencv-python`)  
+- A webcam  
 
-Ultralytics YOLOv8
-
-OpenCV (pip install opencv-python)
-
-A webcam
-
-🚀 How to Run
-
-Clone this repository or download the code.
-
-Install the dependencies:
-
+Install dependencies:  
+```bash
 pip install ultralytics opencv-python
+🚀 Getting Started
+
+Clone this repository:
+
+git clone https://github.com/your-username/hand-pong.git
+cd hand-pong
 
 
 Run the game:
@@ -39,28 +44,27 @@ Run the game:
 python hand_pong.py
 
 
-Move your hand in front of the camera to control the paddle.
+Move your hand in front of the webcam to control the paddle.
 
-Play and see how high you can score!
-
-🎯 Gameplay
+🎮 Gameplay
 
 The ball bounces off the top and bottom walls.
 
-If it hits the paddle → +1 point.
+Use your hand to move the paddle up and down.
 
-If you miss the ball → Game Over.
+If the ball touches the paddle → ✅ you score a point.
 
-🔮 Future Improvements
+If you miss → ❌ Game Over.
 
-Use a specialized YOLO model for hand detection instead of "person".
+<p align="center"> <img src="docs/demo.gif" alt="Hand Pong Demo" width="500"/> </p>
+🔮 Roadmap
 
-2-player mode (left and right paddles).
+ Train YOLO on a hand detection dataset (instead of "person")
 
-Power-ups (e.g., speed boost, double ball).
+ Add 2-player mode (left & right paddles)
 
-Dual-hand control (left hand = paddle, right hand = special moves).
+ Power-ups: speed boost, multiple balls, shrinking paddle
 
-👩‍💻 Author
+ Add sounds and scoreboards
 
-Built for fun with YOLO & OpenCV ✋✨
+ Package release via pip install hand-pong
